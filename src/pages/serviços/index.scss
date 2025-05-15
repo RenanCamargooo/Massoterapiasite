@@ -1,0 +1,82 @@
+.servicos-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffe4e1; 
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+
+    input {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.6rem;
+      font-size: 1rem;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #ff3385;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 0.75rem;
+      border: 1px solid #ffffff;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ffb6c1;
+      font-weight: bold;
+      color: #333;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+
+    button {
+      padding: 0.4rem 0.8rem;
+      background-color: #ff4d6d;
+      border: none;
+      border-radius: 4px;
+      color: white;
+      cursor: pointer;
+      font-size: 0.9rem;
+
+      &:hover {
+        background-color: #cc0033;
+      }
+    }
+  }
+}

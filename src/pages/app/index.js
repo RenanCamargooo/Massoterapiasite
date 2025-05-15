@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
+import './index.css';
+
+import { Link } from 'react-router-dom';
 
 function App() {
   const [section, setSection] = useState('');
@@ -29,6 +31,8 @@ function App() {
         <p>Somos especialistas em massoterapia com anos de experiência cuidando do seu corpo e mente.</p>
       </>
     ),
+
+
   };
 
   return (
@@ -38,19 +42,37 @@ function App() {
           MASSOTERAPIA <br /> <strong>KAREN</strong>
         </div>
         <div className="login">
-          <img
-            src="https://img.icons8.com/ios-filled/30/ffffff/user.png"
-            alt="login"
-          />
-          <span>LOGIN ADMIN</span>
+
+
+
+          <ul>
+            <li>
+              <Link to='/login'>  </Link>
+            </li>
+
+          
+          </ul>
+
+          <nav className="seu-header">
+
+
+            <a href="/login" className="login-link">
+              <span className="login-icon">👤</span>
+              Login admin
+            </a>
+          </nav>
+
+
         </div>
       </header>
 
+
+
       <nav>
-        <button onClick={() => setSection('massagistas')}>Massagistas</button>
-        <button onClick={() => setSection('agendas')}>Agendas</button>
-        <button onClick={() => setSection('servicos')}>Serviços</button>
-        <button onClick={() => setSection('sobre')}>Sobre nós</button>
+        <button><Link to='/massagistas'> Ver massagistas </Link></button>
+        <button><Link to='/agendas'> Agendas </Link></button>
+        <button><Link to='/serviços'> Controle de serviços </Link></button>
+        <button><Link to='/sobre'> Sobre a aplicação </Link></button>
       </nav>
 
       <div className="content">
@@ -67,8 +89,11 @@ function App() {
           <p>Para agendar, basta clicar no botão acima.</p>
         </div>
       </footer>
+
+
     </>
   );
+
 }
 
 export default App;
