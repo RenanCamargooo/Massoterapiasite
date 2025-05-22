@@ -1,0 +1,53 @@
+/* Estilo geral para o dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Título */
+.dashboard-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões */
+.dashboard-container button {
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+/* Efeito hover nos botões */
+.dashboard-container button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .dashboard-container h1 {
+    font-size: 2rem;
+  }
+
+  .dashboard-container button {
+    width: 80%;
+    padding: 10px 20px;
+  }
+}

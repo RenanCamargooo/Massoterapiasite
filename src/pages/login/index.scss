@@ -33,22 +33,25 @@
 }
 
 .login-button {
-  background-color: #ff008c;
+  background: linear-gradient(to right, #ff008c, #c60077);
   color: white;
-  padding: 14px;
+  padding: 14px 24px;
   width: 100%;
   max-width: 400px;
-  border-radius: 10px;
+  border-radius: 50px;
   font-size: 16px;
   font-weight: bold;
   border: none;
   cursor: pointer;
   margin-top: 10px;
-  
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .login-button:hover {
-  background-color: #c60077;
+  background: linear-gradient(to right, #c60077, #ff008c);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   
 }
 
@@ -60,4 +63,9 @@
   cursor: pointer;
   
 }
+
+.login-button + .login-button {
+  margin-top: 16px;
+}
+
 

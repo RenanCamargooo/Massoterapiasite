@@ -1,10 +1,14 @@
-import './index.scss'
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // ← Importa o hook de navegação
+import './index.scss';
 
 const Login = () => {
+  const navigate = useNavigate(); // ← Hook para navegação
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  
   const handleLogin = async () => {
     try {
       const res = await fetch('http://localhost:3000/api/admin/login', {
@@ -17,17 +21,18 @@ const Login = () => {
 
       if (res.ok) {
         alert('Login bem-sucedido!');
-        localStorage.setItem('token', data.token); // caso use JWT
-        window.location.href = '/dashboard'; // redireciona
+        localStorage.setItem('token', data.token);
+        navigate('/dashboard'); 
       } else {
-        alert(data.message || 'Erro ao logar');
+        alert(data.message || 'Erro ao fazer login');
       }
     } catch (error) {
       console.error('Erro no login:', error);
-      alert('Erro no servidor.');
+      alert('Erro no servidor');
     }
   };
 
+  
   const handleRegister = async () => {
     try {
       const res = await fetch('http://localhost:3000/api/admin/register', {
@@ -45,25 +50,28 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Erro no cadastro:', error);
-      alert('Erro no servidor.');
+      alert('Erro no servidor');
     }
   };
 
   return (
     <div className="login-container">
       <h2>Login do Administrador</h2>
+
       <input
         type="email"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
+
       <input
         type="password"
         placeholder="Senha"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+
       <button onClick={handleLogin}>Entrar</button>
       <button onClick={handleRegister}>Cadastrar</button>
     </div>

@@ -7,31 +7,7 @@ function App() {
   const [section, setSection] = useState('');
 
   const sections = {
-    massagistas: (
-      <>
-        <h2>Massagistas</h2>
-        <p>Conheça nossos profissionais qualificados e suas especializações.</p>
-      </>
-    ),
-    agendas: (
-      <>
-        <h2>Agendas</h2>
-        <p>Veja os horários disponíveis e agende seu atendimento.</p>
-      </>
-    ),
-    servicos: (
-      <>
-        <h2>Serviços</h2>
-        <p>Oferecemos diversos tipos de massagem para seu bem-estar.</p>
-      </>
-    ),
-    sobre: (
-      <>
-        <h2>Sobre Nós</h2>
-        <p>Somos especialistas em massoterapia com anos de experiência cuidando do seu corpo e mente.</p>
-      </>
-    ),
-
+    
 
   };
 
@@ -40,7 +16,9 @@ function App() {
       <header>
         <div className="logo">
           MASSOTERAPIA <br /> <strong>KAREN</strong>
+          
         </div>
+        
         <div className="login">
 
 
@@ -69,7 +47,7 @@ function App() {
 
 
       <nav>
-        <button><Link to='/massagistas'> Ver massagistas </Link></button>
+        <button><Link to='/massagistas'> massagistas </Link></button>
         <button><Link to='/agendas'> Agendas </Link></button>
         <button><Link to='/serviços'> Controle de serviços </Link></button>
         <button><Link to='/sobre'> Sobre a aplicação </Link></button>
@@ -77,6 +55,7 @@ function App() {
 
       <div className="content">
         {section ? sections[section] : <p>Selecione uma das opções acima para navegar.</p>}
+        
       </div>
 
       <footer>
@@ -85,8 +64,8 @@ function App() {
           alt="massagem"
         />
         <div className="footer-text">
-          <p>Plataforma de agendamentos e serviços.</p>
-          <p>Para agendar, basta clicar no botão acima.</p>
+          <p>Sua Plataforma de agendamentos e serviços.</p>
+          <p> Para agendar, basta clicar em "Agendas" acima.</p>
         </div>
       </footer>
 
